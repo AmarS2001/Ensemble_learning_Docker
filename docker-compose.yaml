@@ -1,0 +1,32 @@
+version: '3'
+services:
+
+  node1:
+    build:
+      context: .
+      dockerfile: Dockerfile_node1
+    container_name: node_cont_1
+    ports:
+      - "8001:80"
+    restart: on-failure
+
+
+  node2:
+    build:
+      context: .
+      dockerfile: Dockerfile_node2
+    container_name: node_cont_2
+    ports:
+      - "8002:80"
+    restart: on-failure
+
+
+  node3:
+    build:
+      context: .
+      dockerfile: Dockerfile_node3
+    container_name: node_cont_3
+    ports:
+    - "8003:80"
+    restart: on-failure
+    
